@@ -1,5 +1,5 @@
 {% set name = "awxkit" %}
-{% set version = "19.4.0" %}
+{% set version = "23.8.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/awxkit-{{ version }}.tar.gz
-  sha256: 36ea40d34ff484bb861ca55dcf5cf00b12c9c5afd3072657c82b47b4a0834f63
+  sha256: b8184104f50e0dbfed613b1be6faf754204448d1573b6b5f707eac2d8d9dc707
 
 build:
   number: 0
