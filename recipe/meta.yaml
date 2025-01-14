@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/awxkit-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/awxkit-{{ version }}.tar.gz
   sha256: 36ea40d34ff484bb861ca55dcf5cf00b12c9c5afd3072657c82b47b4a0834f63
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - akit=awxkit.scripts.basic_session:load_interactive
@@ -21,9 +21,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - pyyaml
     - requests
 
@@ -37,6 +37,7 @@ test:
     - awx --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ansible/awx
